@@ -36,7 +36,7 @@ AND created_at <= '2021-01-26 00:00:00' ;
 SELECT *
 FROM student
 WHERE created_at >= '2021-01-01' 
-AND created_at <= '2021-01-26';
+AND created_at <= '2021-01-25';
 -- Exo 3.4
 -- Listez les projects :
 -- - dont la description ne contient pas la chaîne de caractères `Dolores`
@@ -53,7 +53,7 @@ OR start_date <= '2021-07-01';
 SELECT *
 FROM project
 WHERE description NOT LIKE '%Dolores%'
-AND start_date <= '2021-07-01';
+AND start_date >= '2021-07-01';
 
 -- Exo 3.6
 -- Listez les projects :
@@ -82,5 +82,5 @@ OR project_id IS NOT NULL;
 SELECT *
 FROM student
 WHERE email LIKE '%.fr' AND created_at <= '2021-01-10'
-OR project_id IS NULL;
+AND project_id IS NULL;
 
